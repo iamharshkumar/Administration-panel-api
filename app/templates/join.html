@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'dashboard' %}"><h1>PUBG100</h1></a>
+  <form class="form-inline">
+    <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+    <a class="navbar-brand" class="my-2 my-sm-0" href="{% url 'logout' %}"><h3>Logout</h3></a>
+  </form>
+</nav>
+<hr>
+<h1 style="padding-bottom:30px;">Participants</h1>
+
+<div class="container">
+  
+    <div>
+      <form method="POST">
+        {% csrf_token  %}
+        {{ form|crispy }}
+        <input class="btn btn-primary btn-lg" type="submit" value="Submit"/>
+      </form>
+    </div>
+    <div>
+        <br>
+        <ol>
+            
+        
+      {% for x in msg  %}
+         
+             <li><h5 style="text-align:left;" >{{ x.pubg_id }}</h5></li>
+         
+           
+         <br>
+     {% endfor %}
+     </ol>
+    
+  </div>
+
+    
+     
+        
+     
+     
+    
+
+
+{% endblock %}
