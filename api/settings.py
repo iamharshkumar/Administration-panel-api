@@ -25,7 +25,7 @@ SECRET_KEY = 'uee4d477)=pn)137arc56(t%k@f%iync-4yw02f*%@n2@n0!uv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tpubg.herokuapp.com']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 

@@ -1,1 +1,1 @@
-api: python api.py
+web:gunicorn api.wsgi
